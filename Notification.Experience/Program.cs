@@ -11,6 +11,7 @@ namespace Notification.Experience
             Console.WriteLine("Notify using Email/SMS[E/S?] ");
             string notificationTarget = Console.ReadLine();
             Contact contact=new Contact("Vikas Joshi","vikas.joshi@live.com",9893497360);
+            string notificationStatus="";
             switch (notificationTarget.ToLower())
             {
                 case "e":
@@ -24,6 +25,7 @@ namespace Notification.Experience
                 default:
                     break;
             }
+            Console.WriteLine(notificationStatus);
         }
     }
 }
