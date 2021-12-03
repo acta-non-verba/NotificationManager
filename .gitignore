@@ -357,3 +357,5 @@ MigrationBackup/
 .vscode/solution-explorer/class.vb-template
 .vscode/solution-explorer/class.ts-template
 .vscode/solution-explorer/class.cs-template
+.vscode/tasks.json
+.vscode/launch.json
