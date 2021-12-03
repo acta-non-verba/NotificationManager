@@ -7,18 +7,18 @@ namespace Notification.Experience
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Notify using Email/SMS[E/S?] ");
+            Console.WriteLine("Notify using Email/Whatsapp[E/S?] ");
             string notificationTarget = Console.ReadLine();
             string notificationStatus="";
             switch (notificationTarget.ToLower())
             {
                 case "e":
                     Notifier emailNotifier = new EmailNotifier();
-                    notificationStatus=emailNotifier.NotifyViaEmail("vikas.joshi@live.com");
+                    notificationStatus=emailNotifier.Notify("vikas.joshi@live.com");
                     break;
                 case "s":
-                    Notifier smsNotifier = new SMSNotifier();
-                    notificationStatus=smsNotifier.NotifyViaSMS("9893497360");
+                    Notifier smsNotifier = new WhatsappNotifier();
+                    notificationStatus=smsNotifier.Notify("9893497360");
                     break;
                 default:
                     break;

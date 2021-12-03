@@ -2,9 +2,13 @@
 
 namespace Notification.Lib.Abstraction
 {
-    public abstract class Notifier
+    public interface INotifiable
     {
-        public abstract string NotifyViaEmail(string email);
-        public abstract string NotifyViaSMS(string mobile);
+        string Notify(string email);
+    }
+
+    public abstract class Notifier : INotifiable
+    {
+        public abstract string Notify(string medium);
     }
 }
