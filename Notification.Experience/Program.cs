@@ -19,10 +19,12 @@ namespace Notification.Experience
                     emailNotifier.Notify(contact);
                     break;
                 case "w":
-                    INotifiable smsNotifier = new WhatsappNotifier();
-                    smsNotifier.Notify(contact);
+                    INotifiable whatsappNotifier = new WhatsappNotifier();
+                    whatsappNotifier.Notify(contact);
                     break;
                 default:
+                    INotifiable SMSNotifier=new SMSNotifier();
+                    SMSNotifier.Notify(contact);
                     break;
             }
             Console.WriteLine(notificationStatus);
