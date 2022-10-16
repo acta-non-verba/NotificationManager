@@ -6,7 +6,7 @@ namespace Notification.Lib.Concretions
     {
         public override string Notify(string medium)
         {
-            return "Notification SMS sent to "+medium;
+            return "Notification SMS sent to "+medium1;
         }
     }
 }
